@@ -20,4 +20,9 @@ Other solutions
     function greet() {
         return "hello world!";
       }
+
+function greet() {
+  return strrev("!dlrow olleh");
+}
+
 ?>
