@@ -17,12 +17,13 @@ Solution
 
 Other solutions 
 <?php 
-    function greet() {
-        return "hello world!";
-      }
+function greet1() {
+      return "hello world!";
+    }
+    echo greet1();
 
-function greet() {
+function greet2() {
   return strrev("!dlrow olleh");
 }
-
+echo greet2();
 ?>
