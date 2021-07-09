@@ -14,3 +14,10 @@ Solution
       }
       echo greet();
 ?>
+
+Other solutions 
+<?php 
+    function greet() {
+        return "hello world!";
+      }
+?>
