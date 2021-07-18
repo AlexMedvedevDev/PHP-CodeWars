@@ -9,8 +9,18 @@ countBy(2,5) // should return [2,4,6,8,10]
 SOLUTIONS: -->
 
 <?php 
-    // function countBy($x, $n) {
-    //     return range($x, $n * $x, $x);
+
+// function countBy($x, $n) {
+//   $z = [];  
+//   for($i=1; $i<=$n; $i++){
+//   array_push($z, $i * $x);
+//   }
+// return $z;
+// }
+
+function countBy($x, $n) {
+  return range($x, $n * $x, $x);
+}
 
     // range - create an array contains elements; 
     // (first element, 
@@ -18,11 +28,10 @@ SOLUTIONS: -->
     // last element)
     // // }
 
-    function countBy($x, $n) {
-        $arr = [$x];
-        for ($i = 1; $i < $n; $i++) {
-          array_push($arr, $x * ($i + 1));
-        }
-        return $arr;
-      }
-?>
+//     function countBy($x, $n) {
+//         $arr = [$x];
+//         for ($i = 1; $i < $n; $i++) {
+//           array_push($arr, $x * ($i + 1));
+//         }
+//         return $arr;
+//       } 
