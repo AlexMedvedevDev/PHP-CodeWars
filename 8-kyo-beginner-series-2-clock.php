@@ -15,6 +15,7 @@ function past($h, $m, $s) {
   return $s*1000+$m*60000+$h*3600000;
 } -->
 
+<?php
 function past($h, $m, $s) {
  return (($h*60+$m)*60+$s)*1000;
 }
