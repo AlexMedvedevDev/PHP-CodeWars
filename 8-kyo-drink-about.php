@@ -17,20 +17,36 @@ Examples: (Input --> Output)
 
 SOLUTIONS
 <?php
-function people_with_age_drink(int $old): string {
-    switch ($old) {
-      case $old<14:
-          return 'drink toddy';
-          break;
-      case $old>=14 && $old<18:
-          return 'drink coke';
-          break;
-      case $old>=18 && $old<21:
-          return 'drink beer';
-          break;
-      case $old>=21:
-          return 'drink whisky';
-          break;
-    }
+// function people_with_age_drink(int $old): string {
+//     if ($old < 14) 
+//           return 'drink toddy';
+//     if ($old >=14 && $old < 18)
+//           return 'drink coke';
+//     if ($old>=18 && $old<21)
+//           return 'drink beer';
+//     if ($old>=21)
+//           return 'drink whisky';
+// }
+
+function people_with_age_drink(int $n): string {
+    return 'drink ' . ($n < 21 ? $n < 18 ? $n < 14 ? 'toddy' : 'coke' : 'beer' : 'whisky');
 }
 
+// function people_with_age_drink(int $old): string {
+//     switch (true) {
+//       case ($old < 14): return "drink toddy";
+//       case ($old < 18): return "drink coke";
+//       case ($old < 21): return "drink beer";
+//       case ($old >= 21): return "drink whisky";
+//     }
+// }
+
+// function people_with_age_drink(int $old): string {
+//     $limit = [14 => 'toddy', 18 => 'coke', 21 => 'beer'];
+//     foreach ($limit as $age => $drink) {
+//         if ($old < $age) {
+//             return 'drink ' . $drink;
+//         }
+//     }
+//     return 'drink whisky';
+// }
