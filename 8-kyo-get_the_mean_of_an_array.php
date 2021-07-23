@@ -6,6 +6,7 @@ Return the average of the given array rounded down to its nearest integer.
 The array will never be empty. -->
 
 // Solutions
+<?php
 function get_average($a) {
   return floor(array_sum($a) / sizeof($a));
 }
