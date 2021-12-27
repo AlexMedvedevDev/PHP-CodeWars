@@ -26,3 +26,16 @@ function save($sizes, $hd) {
     }
     return $i;
 }
+
+// function save($sizes, $hd) {
+//     $counter = 0;
+//     while ($hd >= 0 && $counter < count($sizes)) {
+//       $hd -= $sizes[$counter];
+//       $counter += ($hd >= 0 ? 1 : 0);
+//     }
+//     return $counter;
+// }
+
+// function save($sizes, $hd) {
+//     return $sizes && $sizes[0] <= $hd ? 1 + save(array_slice($sizes, 1), $hd - $sizes[0]) : 0;
+// }
