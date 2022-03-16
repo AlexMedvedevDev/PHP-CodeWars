@@ -18,12 +18,12 @@ changeCount('dime') == '$0.10'
 
 SOLUTIONS
 <?php
-// function changeCount($change) {
-//     return sprintf("$%1.2f", array_sum(array_map(function($e) { // sprintf — Return a formatted string
-//       return CHANGE[$e];
-//     }, explode(" ", $change))));
-// }
-
 function changeCount($change) {
-    return '$'.number_format(eval('return '.str_replace(['penny', 'nickel', 'dime', 'quarter', 'dollar',' '],[0.01, 0.05, 0.10, 0.25, 1.00, '+'],$change).';'), 2);
+    return sprintf("$%1.2f", array_sum(array_map(function($e) { // sprintf — Return a formatted string
+      return CHANGE[$e];
+    }, explode(" ", $change))));
 }
+
+// function changeCount($change) {
+//     return '$'.number_format(eval('return '.str_replace(['penny', 'nickel', 'dime', 'quarter', 'dollar',' '],[0.01, 0.05, 0.10, 0.25, 1.00, '+'],$change).';'), 2);
+// }
